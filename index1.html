@@ -155,6 +155,7 @@
       position:absolute;
       width:320px;height:320px;
       background: radial-gradient(circle at 30% 30%, rgba(255,177,0,.95), rgba(255,122,0,.25) 68%, transparent 72%);
+      filter: blur(0px);
       opacity:.9;
       transform: rotate(20deg);
       border-radius: 60% 40% 55% 45% / 55% 45% 55% 45%;
@@ -523,8 +524,10 @@
 
         <div class="bowl">
           <div class="bowl-card">
-            <!-- ✅ Fixed path -->
-            <img src="assets/img/pic00.png" alt="Food">
+            <!-- You can replace this with your own food image -->
+           <!-- <img src="https://images.unsplash.com/photo-1604908554162-1a72f0bbd10b?q=80&w=1400&auto=format&fit=crop" alt="Food Bowl">-->
+		  <img src="\asset\img\pic01.jpg" alt="Food">
+
           </div>
         </div>
       </div>
@@ -536,7 +539,7 @@
           Fresh • Fast • Delicious
         </div>
 
-        <h1>Nuvly Foods.</h1>
+        <h1>It’s that simple.</h1>
         <p>
           We serve premium quality Foods with bold flavors — perfect for families, offices,
           and events. Order your favorites and enjoy fast delivery with a modern dining experience.
@@ -638,48 +641,47 @@
 
         <div class="food-card reveal">
           <div class="food-thumb">
-            <!-- ✅ Fixed path + extension -->
-            <img src="assets/img/pic01.png" alt="Sambar Powder">
+            <img src="assets\img\pic01" alt="Ramen Bowl">
           </div>
           <div class="food-top">
             <h3 style="font-size:16px;">Sambar Powder</h3>
             <div class="price">RS 50</div>
           </div>
           <p>Aromatic sambar powder made with roasted spices — rich, authentic South Indian flavor.</p>
-          <button class="btn btn-ghost" style="margin-top:12px;width:100%;" onclick="quickOrder('Sambar Powder')">
+          <button class="btn btn-ghost" style="margin-top:12px;width:100%;" onclick="quickOrder('Spicy Ramen Bowl')">
             <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
           </button>
         </div>
 
         <div class="food-card reveal">
           <div class="food-thumb">
-            <!-- ✅ Fixed path -->
-            <img src="assets/img/pic02.png" alt="Papadavada">
+            <img src="\asset\img\pic01.jpg" alt="Food">
           </div>
           <div class="food-top">
-            <h3 style="font-size:16px;">Papadavada</h3>
+            <h3 style="font-size:16px;">Pappadavada</h3>
             <div class="price">RS 40</div>
           </div>
-          <p>Crispy papadava</p>
-          <button class="btn btn-ghost" style="margin-top:12px;width:100%;" onclick="quickOrder('Papadavada')">
+          <p>Melty cheese, crispy crust, and premium toppings with signature sauces.</p>
+          <button class="btn btn-ghost" style="margin-top:12px;width:100%;" onclick="quickOrder('Cheesy Pizza Slice')">
             <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
           </button>
         </div>
 
         <div class="food-card reveal">
           <div class="food-thumb">
-            <!-- ✅ Fixed path -->
-            <img src="assets/img/pic03.png" alt="Idly Powder">
+             <img src="\asset\img\pic01.jpg" alt="Food">
           </div>
           <div class="food-top">
             <h3 style="font-size:16px;">Idly Powder</h3>
             <div class="price">RS 50</div>
           </div>
-          <p>Flavor-packed idly powder blended with roasted spices — perfect with ghee and dosa.</p>
-          <button class="btn btn-ghost" style="margin-top:12px;width:100%;" onclick="quickOrder('Idly Powder')">
+          <p>Juicy beef patty with premium buns, fresh veggies and our secret sauce.</p>
+          <button class="btn btn-ghost" style="margin-top:12px;width:100%;" onclick="quickOrder('Classic Beef Burger')">
             <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
           </button>
         </div>
+
+       
 
       </div>
     </div>
@@ -702,6 +704,8 @@
         <div class="contact-card reveal">
           <h3 style="font-size:18px;margin-bottom:10px;">WhatsApp Contact Form</h3>
 
+          <!-- CHANGE YOUR WHATSAPP NUMBER HERE -->
+          <!-- Example UAE format: 971xxxxxxxxx (no + sign) -->
           <form id="waForm">
             <div class="field">
               <label>Your Name</label>
@@ -710,12 +714,12 @@
 
             <div class="field">
               <label>Mobile Number</label>
-              <input type="tel" id="phone" placeholder="e.g. +91 50 000 0000" required>
+              <input type="tel" id="phone" placeholder="e.g. +971 50 000 0000" required>
             </div>
 
             <div class="field">
               <label>Food / Order Details</label>
-              <textarea id="message" placeholder="Example: 2x Papadavada, 1x Sambar Powder, Delivery to ..." required></textarea>
+              <textarea id="message" placeholder="Example: 2x Pappadava, 1x Sambar Powder, Delivery to Kochannur..." required></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary" style="width:100%;">
@@ -754,7 +758,7 @@
               <a class="icon-btn" href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
               <a class="icon-btn" href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
             </div>
-          </div
+          </div>
         </div>
 
       </div>
@@ -771,7 +775,7 @@
         </div>
 
         <div class="copyright">
-          © <span id="year"></span>  <a href="www.adiinnovation.com">www.adiinnovation.com</a> All Rights Reserved.
+          © <span id="year"></span> adiinnovation. All Rights Reserved.
         </div>
       </div>
     </div>
@@ -784,7 +788,7 @@
 
   <script>
     // ✅ Put your WhatsApp number here (without +)
-    const WHATSAPP_NUMBER = "918589900277";
+    const WHATSAPP_NUMBER = "918589900277"; //
 
     // Smooth scroll
     function scrollToId(id){
@@ -827,7 +831,7 @@
       const message = document.getElementById("message").value.trim();
 
       const finalMsg =
-`Hello Nuvly Foods 👋
+`Hello Golden Bites 👋
 Name: ${name}
 Mobile: ${phone}
 
@@ -840,14 +844,14 @@ ${message}`;
 
     // Quick order buttons
     function quickOrder(itemName){
-      const finalMsg = `Hello Nuvly Foods 👋%0A%0AI want to order: *${itemName}*%0A%0APlease share price & delivery time.`;
+      const finalMsg = `Hello Golden Bites 👋%0A%0AI want to order: *${itemName}*%0A%0APlease share price & delivery time.`;
       const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${finalMsg}`;
       window.open(url, "_blank");
     }
 
     // General WhatsApp Chat
     function openWhatsAppGeneral(){
-      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello Nuvly Foods 👋 I want to place an order.")}`;
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello Golden Bites 👋 I want to place an order.")}`;
       window.open(url, "_blank");
     }
   </script>
